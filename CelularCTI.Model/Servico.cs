@@ -188,7 +188,7 @@ namespace CelularCTI.Model
                 
             }catch (Exception ex)
             {
-                throw new ApplicationException("Não foi possivel efetivar o pedido  da " + "\n\n Mais detalhes:" +ex.Message);
+                throw new ApplicationException("Não foi possivel efetivar o pedido  da " + "\n\n Mais detalhes:" + ex.Message);
             }
             return p;
         }
