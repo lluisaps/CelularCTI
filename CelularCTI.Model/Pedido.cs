@@ -10,7 +10,7 @@ namespace CelularCTI.Model.Entidades
     {
         private Int64 id_pedido;
         private Aparelho aparelho;
-        private DateTime dataHoraPedido;//guarda estatisticas intervalo de tempo, melhor não guardar so a data
+        private DateTime dataHoraPedido;
         private string observacao;
 
         public long Id_pedido { get => id_pedido; set => id_pedido = value; }

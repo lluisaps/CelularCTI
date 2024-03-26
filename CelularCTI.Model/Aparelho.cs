@@ -27,30 +27,10 @@ namespace CelularCTI.Model.Entidades
         public float Largura { get;set; }
         public float Espessura { get; set;}
 
-        public float Quantidade
-        {
-            get { return Quantidade; }
-            set { if (Quantidade >= 0)
-                    Quantidade = value;
-                else
-                    throw new Exception("A quantidade deve ser maior ou igual a zero");
-            // deu erro ele recebe essa mensagem :o
-            } 
-        }
+        public float Quantidade { get; set; }
         public float Peso { get; set; }//se eu coloco peso minusculo o throw da erro aqui por causa do exception
 
-        public float Preco
-        {
-            get { return preco; }
-            set
-            {
-                if (preco > 0)
-                    preco = value;
-                else
-                    throw new Exception("O preço deve ser maior ou igual a zero");
-                // deu erro ele recebe essa mensagem :o
-            }
-        }
+        public float Preco { get; set; }
 
         public float Desconto {  get; set; }
 
@@ -59,8 +39,8 @@ namespace CelularCTI.Model.Entidades
         {
             return Fabricante.Nome.PadRight(15) +
                 Modelo.PadRight(25) +
-                Preco.ToString("#,##0.000").PadLeft(20) +
-                (" "+ Quantidade + "Em estoque" );
+                Preco.ToString("C").PadLeft(25) +
+                "( " + Quantidade + "Em estoque )" ;
         }
 
 

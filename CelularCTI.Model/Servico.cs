@@ -5,11 +5,10 @@ using CelularCTI.Model.Entidades;
 using CelularCTI.Model.Suporte;
 using Npgsql;
 
-namespace Celulares.Model
+namespace CelularCTI.Model
 {
     public static class Servico
     {
-        //Métodos Gerais
 
         public static Fabricante ObjFabricante(ref NpgsqlDataReader dtr)
         {
@@ -108,9 +107,6 @@ namespace Celulares.Model
                 sql += "where id_fabricante = " + fab.Id_Fabricante;
             }
         }
-
-
-        //---------------------------------Métodos de Pesquisa---------------------------------------
 
 
         public static List<Aparelho> BuscarAparelho()
@@ -247,7 +243,6 @@ namespace Celulares.Model
 
                 ConnBanco.Executar(sql);
 
-                // Dando baixa no estoque do aparelho
                 ap.Quantidade--;
                 Salvar(ap);
 

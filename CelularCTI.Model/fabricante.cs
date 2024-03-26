@@ -9,13 +9,8 @@ namespace CelularCTI.Model
 {
     public class Fabricante
     {
-        //Método Construtor de classe
+        //metodos construtores
 
-        //Atributos internos
-
-        //Propriedades da classe - são os atributos que serão expostos que terão seus dados expostos 
-
-        //Métodos 
 
         private Int64 id_Fabricante;
         private string nome;

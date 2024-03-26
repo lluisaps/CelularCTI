@@ -39,7 +39,7 @@ namespace CelularCTI.Desktop
 
         private void btnBuscaPreco_Click(object sender, EventArgs e)
         {
-            ap = Servico.BuscarAparelho(numPrecoMin.Value, numPrecoMax.Value);
+            ap = Servico.BuscarAparelho(numPrecoInicial.Value, numPrecoFinal.Value);
             lstCelulares.DataSource = ap;
         }
 
@@ -62,22 +62,5 @@ namespace CelularCTI.Desktop
             ap = Servico.BuscarAparelho();
             lstCelulares.DataSource = ap;
         }
-
-        private void btnComprar_Click(object sender, EventArgs e)
-        {
-            Aparelho selecionado = ap[lstCelulares.SelectedIndex];
-            if (selecionado.Quantidade > 0)
-                new frmComprar(selecionado).Show();
-            else
-                MessageBox.Show(
-
-                "Não há aparelhos deste modelo no estoque!");
-        }
-
-        private void btnNovo_Click(object sender, EventArgs e)
-        {
-            new frmNovo().Show();
-        }
-
     }
 }

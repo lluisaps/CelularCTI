@@ -21,25 +21,25 @@ namespace CelularCTI.Model.Suporte
         //                              "User ID= postgres; password = postgres;";
 
 
-    
-
-        static string stringConexao = "Server = banco72a.postgresql.dbaas.com.br; " +
-                                      "Database = banco72a; Port=5432;" +
-                                      "User ID= projetoscti; password = b@nco@unesp356;";
 
 
-        static NpgsqlConnection cn;
+        static string stringConexao = "Server = pgsql.projetoscti.com.br; " +
+                                    "Database = projetoscti; Port=5432;" +
+                                    "User ID= projetoscti; password = 123;";
+
+
+        static NpgsqlConnection conn;
      
         private static void Conectar()
         {
-            if (cn == null)
-                cn = new NpgsqlConnection();
+            if (conn == null)
+                conn = new NpgsqlConnection();
             try
             {
-                if (cn.State != ConnectionState.Open)
+                if (conn.State != ConnectionState.Open)
                 {
-                    cn.ConnectionString = stringConexao;
-                    cn.Open();
+                    conn.ConnectionString = stringConexao;
+                    conn.Open();
                 }
             }
             catch (NpgsqlException ex)
@@ -49,18 +49,16 @@ namespace CelularCTI.Model.Suporte
         }
         private static void Desconectar()
         {
-            cn.Close();// fecha a conexão com o banco de dados
-            cn.Dispose(); // libera os recursos utilizados
-            cn = null;
+            conn.Close();
+            conn.Dispose(); 
+            conn = null;
         }
-        //Executa uma query no banco de dados. (Sem retorno)
-        // insert - update - delete
         public static void Executar(string sql)
         {
             try
             {
                 Conectar();
-                NpgsqlCommand cmd = new NpgsqlCommand(sql, cn);
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
                 cmd.ExecuteNonQuery();
             }
             catch (NpgsqlException ex)
@@ -72,7 +70,6 @@ namespace CelularCTI.Model.Suporte
                 Desconectar();
             }
         }
-        //Executa uma query no banco de dados com parametros
         public static void Executar(string sql, List<object> parametros)
         {
             try
@@ -80,7 +77,7 @@ namespace CelularCTI.Model.Suporte
                 Conectar();
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.CommandText = sql;
-                cmd.Connection = cn;
+                cmd.Connection = conn;
                 int i = 1;
                 foreach (object parametro in parametros)
                     cmd.Parameters.AddWithValue(i++.ToString(), parametro);
@@ -95,7 +92,6 @@ namespace CelularCTI.Model.Suporte
                 Desconectar();
             }
         }
-        //Executa uma query no banco de dados com parametros retornando 'campoRetorno'
         public static Int64 Executar(string sql, List<object> parametros, string campoRetorno)
         {
             try
@@ -104,7 +100,7 @@ namespace CelularCTI.Model.Suporte
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 int modificado = 0;
                 cmd.CommandText = sql + " RETURNING " + campoRetorno;
-                cmd.Connection = cn;
+                cmd.Connection = conn;
                 int i = 1;
                 foreach (object parametro in parametros)
                     cmd.Parameters.AddWithValue(i++.ToString(), parametro);
@@ -120,13 +116,12 @@ namespace CelularCTI.Model.Suporte
                 Desconectar();
             }
         }
-        //Select simples retornando um DataReader
         public static NpgsqlDataReader Selecionar(string sql)
         {
             try
             {
                 Conectar();
-                NpgsqlCommand cmd = new NpgsqlCommand(sql, cn);
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
                 return cmd.ExecuteReader(CommandBehavior.CloseConnection);
             }
             catch (NpgsqlException ex)
@@ -135,7 +130,6 @@ namespace CelularCTI.Model.Suporte
                 throw new ApplicationException(ex.Message);
             }
         }
-        //Select com parametros retornando um DataReader
         public static NpgsqlDataReader Selecionar(string sql, List<object> parametros)
         {
             try
@@ -143,7 +137,7 @@ namespace CelularCTI.Model.Suporte
                 Conectar();
                 NpgsqlCommand cmd = new NpgsqlCommand();
                 cmd.CommandText = sql;
-                cmd.Connection = cn;
+                cmd.Connection = conn;
                 int i = 1;
                 foreach (object parametro in parametros)
                     cmd.Parameters.AddWithValue(i++.ToString(), parametro);
@@ -155,15 +149,13 @@ namespace CelularCTI.Model.Suporte
                 throw new ApplicationException(ex.Message);
             }
         }
-        // Select retornando os dados em um DataTable
         public static DataTable SelecionarDataTable(string sql)
         {
             try
             {
                 Conectar();
-                // Cria o objeto DataTable
                 DataTable dt = new DataTable();
-                NpgsqlCommand cmd = new NpgsqlCommand(sql, cn);
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                 da.Fill(dt);
                 return dt;
@@ -182,9 +174,8 @@ namespace CelularCTI.Model.Suporte
             try
             {
                 Conectar();
-                // Cria o objeto DataSet
                 DataSet ds = new DataSet();
-                NpgsqlCommand cmd = new NpgsqlCommand(sql, cn);
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                 da.Fill(ds);
                 return ds;
@@ -203,14 +194,13 @@ namespace CelularCTI.Model.Suporte
             try
             {
                 Conectar();
-                // Cria o objeto DataSet
                 DataSet ds = new DataSet();
                 string sql = @"select " + campos + " from " + tabela;
                 if (where != "")
                     sql += @" where " + where + " ";
                 if (orderBy != "")
                     sql += @" order by " + orderBy + " ";
-                NpgsqlCommand cmd = new NpgsqlCommand(sql, cn);
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
                 NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
                 da.Fill(ds, tabela);
                 return ds;

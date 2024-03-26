@@ -29,72 +29,83 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cmbFabricante = new System.Windows.Forms.ComboBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
+            this.btnPreco = new System.Windows.Forms.Button();
+            this.btnModelo = new System.Windows.Forms.Button();
             this.a = new System.Windows.Forms.Label();
-            this.bntPesquisar = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.bntFabricante = new System.Windows.Forms.Button();
             this.numPrecoInicial = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lstCelulares = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.cmbFabricante = new System.Windows.Forms.ComboBox();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnComprar = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.numPrecoFinal = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecoInicial)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecoFinal)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.numPrecoFinal);
             this.groupBox1.Controls.Add(this.cmbFabricante);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.txtModelo);
+            this.groupBox1.Controls.Add(this.btnPreco);
+            this.groupBox1.Controls.Add(this.btnModelo);
             this.groupBox1.Controls.Add(this.a);
-            this.groupBox1.Controls.Add(this.bntPesquisar);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.bntFabricante);
             this.groupBox1.Controls.Add(this.numPrecoInicial);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(113, 36);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 264);
+            this.groupBox1.Size = new System.Drawing.Size(630, 264);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar Por:";
             // 
-            // textBox1
+            // cmbFabricante
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 20);
-            this.textBox1.TabIndex = 8;
+            this.cmbFabricante.FormattingEnabled = true;
+            this.cmbFabricante.Location = new System.Drawing.Point(112, 124);
+            this.cmbFabricante.Name = "cmbFabricante";
+            this.cmbFabricante.Size = new System.Drawing.Size(290, 21);
+            this.cmbFabricante.TabIndex = 10;
             // 
-            // button3
+            // txtModelo
             // 
-            this.button3.Location = new System.Drawing.Point(425, 38);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 7;
-            this.button3.Text = ">>";
-            this.button3.UseVisualStyleBackColor = true;
+            this.txtModelo.Location = new System.Drawing.Point(112, 85);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(290, 20);
+            this.txtModelo.TabIndex = 8;
             // 
-            // button2
+            // btnPreco
             // 
-            this.button2.Location = new System.Drawing.Point(425, 85);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = ">>";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPreco.Location = new System.Drawing.Point(425, 38);
+            this.btnPreco.Name = "btnPreco";
+            this.btnPreco.Size = new System.Drawing.Size(75, 23);
+            this.btnPreco.TabIndex = 7;
+            this.btnPreco.Text = ">>";
+            this.btnPreco.UseVisualStyleBackColor = true;
+            this.btnPreco.Click += new System.EventHandler(this.btnBuscaPreco_Click);
+            // 
+            // btnModelo
+            // 
+            this.btnModelo.Location = new System.Drawing.Point(425, 85);
+            this.btnModelo.Name = "btnModelo";
+            this.btnModelo.Size = new System.Drawing.Size(75, 23);
+            this.btnModelo.TabIndex = 6;
+            this.btnModelo.Text = ">>";
+            this.btnModelo.UseVisualStyleBackColor = true;
+            this.btnModelo.Click += new System.EventHandler(this.btnBuscaModelo_Click);
             // 
             // a
             // 
@@ -105,38 +116,15 @@
             this.a.TabIndex = 5;
             this.a.Text = "a";
             // 
-            // bntPesquisar
+            // bntFabricante
             // 
-            this.bntPesquisar.Location = new System.Drawing.Point(425, 120);
-            this.bntPesquisar.Name = "bntPesquisar";
-            this.bntPesquisar.Size = new System.Drawing.Size(75, 23);
-            this.bntPesquisar.TabIndex = 4;
-            this.bntPesquisar.Text = ">>";
-            this.bntPesquisar.UseVisualStyleBackColor = true;
-            this.bntPesquisar.Click += new System.EventHandler(this.bntPesquisar_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Location = new System.Drawing.Point(282, 41);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            -2147483648});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bntFabricante.Location = new System.Drawing.Point(425, 124);
+            this.bntFabricante.Name = "bntFabricante";
+            this.bntFabricante.Size = new System.Drawing.Size(75, 23);
+            this.bntFabricante.TabIndex = 4;
+            this.bntFabricante.Text = ">>";
+            this.bntFabricante.UseVisualStyleBackColor = true;
+            this.bntFabricante.Click += new System.EventHandler(this.btnBuscaFabricante_Click);
             // 
             // numPrecoInicial
             // 
@@ -192,63 +180,91 @@
             // lstCelulares
             // 
             this.lstCelulares.FormattingEnabled = true;
-            this.lstCelulares.Location = new System.Drawing.Point(100, 31);
+            this.lstCelulares.Location = new System.Drawing.Point(22, 19);
             this.lstCelulares.Name = "lstCelulares";
-            this.lstCelulares.Size = new System.Drawing.Size(383, 121);
+            this.lstCelulares.Size = new System.Drawing.Size(586, 212);
             this.lstCelulares.TabIndex = 10;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnListar);
             this.groupBox2.Controls.Add(this.lstCelulares);
-            this.groupBox2.Location = new System.Drawing.Point(91, 331);
+            this.groupBox2.Location = new System.Drawing.Point(12, 295);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(635, 272);
+            this.groupBox2.Size = new System.Drawing.Size(630, 272);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Celulares:";
             // 
-            // button4
+            // btnNovo
             // 
-            this.button4.Location = new System.Drawing.Point(181, 628);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = ">>";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnNovo.Location = new System.Drawing.Point(68, 601);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(104, 34);
+            this.btnNovo.TabIndex = 11;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnComprar
             // 
-            this.button5.Location = new System.Drawing.Point(567, 628);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 12;
-            this.button5.Text = ">>";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnComprar.Location = new System.Drawing.Point(428, 601);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.Size = new System.Drawing.Size(104, 34);
+            this.btnComprar.TabIndex = 12;
+            this.btnComprar.Text = "Comprar";
+            this.btnComprar.UseVisualStyleBackColor = true;
             // 
-            // cmbFabricante
+            // btnListar
             // 
-            this.cmbFabricante.FormattingEnabled = true;
-            this.cmbFabricante.Location = new System.Drawing.Point(112, 124);
-            this.cmbFabricante.Name = "cmbFabricante";
-            this.cmbFabricante.Size = new System.Drawing.Size(290, 21);
-            this.cmbFabricante.TabIndex = 10;
+            this.btnListar.Location = new System.Drawing.Point(22, 234);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(107, 32);
+            this.btnListar.TabIndex = 13;
+            this.btnListar.Text = "Listar todos";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListarAp_Click);
+            // 
+            // numPrecoFinal
+            // 
+            this.numPrecoFinal.DecimalPlaces = 2;
+            this.numPrecoFinal.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numPrecoFinal.Location = new System.Drawing.Point(282, 43);
+            this.numPrecoFinal.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numPrecoFinal.Minimum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            -2147483648});
+            this.numPrecoFinal.Name = "numPrecoFinal";
+            this.numPrecoFinal.Size = new System.Drawing.Size(120, 20);
+            this.numPrecoFinal.TabIndex = 11;
+            this.numPrecoFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 699);
-            this.Controls.Add(this.button5);
+            this.ClientSize = new System.Drawing.Size(655, 699);
+            this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmPrincipal";
             this.Text = "LojaCelularCTI O Seu mundo Mobille";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecoInicial)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecoFinal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,18 +275,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numPrecoInicial;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtModelo;
+        private System.Windows.Forms.Button btnPreco;
+        private System.Windows.Forms.Button btnModelo;
         private System.Windows.Forms.Label a;
-        private System.Windows.Forms.Button bntPesquisar;
+        private System.Windows.Forms.Button bntFabricante;
         private System.Windows.Forms.ListBox lstCelulares;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnComprar;
+        private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.ComboBox cmbFabricante;
+        private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.NumericUpDown numPrecoFinal;
     }
 }
 
