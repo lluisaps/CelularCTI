@@ -11,24 +11,23 @@ namespace CelularCTI.Model.Entidades
         private Int64 id_aparelho;
         private Fabricante fabricante;
         private string modelo;
-        private double largura;
-        private double altura;
-        private double espessura;
-        private double quantidade;
-        private double peso;
-        private decimal preco;
-        private decimal desconto;
+        private float largura;
+        private float altura;
+        private float espessura;
+        private float quantidade;
+        private float peso;
+        private float preco;
+        private float desconto;
 
         //criar as propriedades
         public Int64 Id_Aparelho{ get; set; }
         public Fabricante Fabricante { get; set; }  
         public string Modelo { get; set; }
-        
-        public double Altura {  get; set; } 
-        public double Largura { get;set; }
-        public double Espessura { get; set;}
+        public float Altura {  get; set; } 
+        public float Largura { get;set; }
+        public float Espessura { get; set;}
 
-        public double Quantidade
+        public float Quantidade
         {
             get { return Quantidade; }
             set { if (Quantidade >= 0)
@@ -38,9 +37,9 @@ namespace CelularCTI.Model.Entidades
             // deu erro ele recebe essa mensagem :o
             } 
         }
-        public double Peso { get; set; }//se eu coloco peso minusculo o throw da erro aqui por causa do exception
+        public float Peso { get; set; }//se eu coloco peso minusculo o throw da erro aqui por causa do exception
 
-        public decimal Preco
+        public float Preco
         {
             get { return preco; }
             set
@@ -53,7 +52,16 @@ namespace CelularCTI.Model.Entidades
             }
         }
 
-        public decimal Desconto {  get; set; } 
+        public float Desconto {  get; set; }
+
+
+        public override String ToString()
+        {
+            return Fabricante.Nome.PadRight(15) +
+                Modelo.PadRight(25) +
+                Preco.ToString("#,##0.000").PadLeft(20) +
+                (" "+ Quantidade + "Em estoque" );
+        }
 
 
 

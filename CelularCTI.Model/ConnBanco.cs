@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CelularCTI.Model.Suporte
 {
-    public static class ConexaoBanco
+    public static class ConnBanco
     {
 
         //Variavel que contem os dados da conexão ao banco
