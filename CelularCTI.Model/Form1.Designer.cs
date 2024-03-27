@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numPrecoInicial = new System.Windows.Forms.NumericUpDown();
+            this.numLargura = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numAltura = new System.Windows.Forms.NumericUpDown();
             this.cmbFabricante = new System.Windows.Forms.ComboBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,53 +38,53 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.Peso = new System.Windows.Forms.NumericUpDown();
+            this.numQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.numExpessura = new System.Windows.Forms.NumericUpDown();
+            this.numPeso = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
+            this.numPreco = new System.Windows.Forms.NumericUpDown();
+            this.numDesconto = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecoInicial)).BeginInit();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numLargura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Peso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAltura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numExpessura)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPeso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPreco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDesconto)).BeginInit();
             this.SuspendLayout();
             // 
-            // numPrecoInicial
+            // numLargura
             // 
-            this.numPrecoInicial.DecimalPlaces = 2;
-            this.numPrecoInicial.Increment = new decimal(new int[] {
+            this.numLargura.DecimalPlaces = 2;
+            this.numLargura.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numPrecoInicial.Location = new System.Drawing.Point(157, 112);
-            this.numPrecoInicial.Maximum = new decimal(new int[] {
+            this.numLargura.Location = new System.Drawing.Point(157, 112);
+            this.numLargura.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.numPrecoInicial.Minimum = new decimal(new int[] {
+            this.numLargura.Minimum = new decimal(new int[] {
             1410065407,
             2,
             0,
             -2147483648});
-            this.numPrecoInicial.Name = "numPrecoInicial";
-            this.numPrecoInicial.Size = new System.Drawing.Size(120, 20);
-            this.numPrecoInicial.TabIndex = 3;
-            this.numPrecoInicial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numLargura.Name = "numLargura";
+            this.numLargura.Size = new System.Drawing.Size(120, 20);
+            this.numLargura.TabIndex = 3;
+            this.numLargura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // numericUpDown1
             // 
@@ -110,29 +110,29 @@
             this.numericUpDown1.TabIndex = 4;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // numericUpDown2
+            // numAltura
             // 
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Increment = new decimal(new int[] {
+            this.numAltura.DecimalPlaces = 2;
+            this.numAltura.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown2.Location = new System.Drawing.Point(157, 154);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numAltura.Location = new System.Drawing.Point(157, 154);
+            this.numAltura.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.numAltura.Minimum = new decimal(new int[] {
             1410065407,
             2,
             0,
             -2147483648});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 5;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numAltura.Name = "numAltura";
+            this.numAltura.Size = new System.Drawing.Size(120, 20);
+            this.numAltura.TabIndex = 5;
+            this.numAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // cmbFabricante
             // 
@@ -194,77 +194,77 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Altura";
             // 
-            // numericUpDown3
+            // numQuantidade
             // 
-            this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Increment = new decimal(new int[] {
+            this.numQuantidade.DecimalPlaces = 2;
+            this.numQuantidade.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown3.Location = new System.Drawing.Point(425, 114);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.numQuantidade.Location = new System.Drawing.Point(425, 114);
+            this.numQuantidade.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
+            this.numQuantidade.Minimum = new decimal(new int[] {
             1410065407,
             2,
             0,
             -2147483648});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 19;
-            this.numericUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numQuantidade.Name = "numQuantidade";
+            this.numQuantidade.Size = new System.Drawing.Size(120, 20);
+            this.numQuantidade.TabIndex = 19;
+            this.numQuantidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // numericUpDown4
+            // numExpessura
             // 
-            this.numericUpDown4.DecimalPlaces = 2;
-            this.numericUpDown4.Increment = new decimal(new int[] {
+            this.numExpessura.DecimalPlaces = 2;
+            this.numExpessura.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown4.Location = new System.Drawing.Point(157, 205);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.numExpessura.Location = new System.Drawing.Point(157, 205);
+            this.numExpessura.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.numericUpDown4.Minimum = new decimal(new int[] {
+            this.numExpessura.Minimum = new decimal(new int[] {
             1410065407,
             2,
             0,
             -2147483648});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown4.TabIndex = 20;
-            this.numericUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numExpessura.Name = "numExpessura";
+            this.numExpessura.Size = new System.Drawing.Size(120, 20);
+            this.numExpessura.TabIndex = 20;
+            this.numExpessura.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Peso
+            // numPeso
             // 
-            this.Peso.DecimalPlaces = 2;
-            this.Peso.Increment = new decimal(new int[] {
+            this.numPeso.DecimalPlaces = 2;
+            this.numPeso.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.Peso.Location = new System.Drawing.Point(157, 245);
-            this.Peso.Maximum = new decimal(new int[] {
+            this.numPeso.Location = new System.Drawing.Point(157, 245);
+            this.numPeso.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.Peso.Minimum = new decimal(new int[] {
+            this.numPeso.Minimum = new decimal(new int[] {
             1410065407,
             2,
             0,
             -2147483648});
-            this.Peso.Name = "Peso";
-            this.Peso.Size = new System.Drawing.Size(120, 20);
-            this.Peso.TabIndex = 21;
-            this.Peso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numPeso.Name = "numPeso";
+            this.numPeso.Size = new System.Drawing.Size(120, 20);
+            this.numPeso.TabIndex = 21;
+            this.numPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -303,53 +303,53 @@
             this.label9.TabIndex = 25;
             this.label9.Text = "Preço";
             // 
-            // numericUpDown6
+            // numPreco
             // 
-            this.numericUpDown6.DecimalPlaces = 2;
-            this.numericUpDown6.Increment = new decimal(new int[] {
+            this.numPreco.DecimalPlaces = 2;
+            this.numPreco.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown6.Location = new System.Drawing.Point(425, 159);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
+            this.numPreco.Location = new System.Drawing.Point(425, 159);
+            this.numPreco.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.numericUpDown6.Minimum = new decimal(new int[] {
+            this.numPreco.Minimum = new decimal(new int[] {
             1410065407,
             2,
             0,
             -2147483648});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown6.TabIndex = 26;
-            this.numericUpDown6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numPreco.Name = "numPreco";
+            this.numPreco.Size = new System.Drawing.Size(120, 20);
+            this.numPreco.TabIndex = 26;
+            this.numPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // numericUpDown7
+            // numDesconto
             // 
-            this.numericUpDown7.DecimalPlaces = 2;
-            this.numericUpDown7.Increment = new decimal(new int[] {
+            this.numDesconto.DecimalPlaces = 2;
+            this.numDesconto.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numericUpDown7.Location = new System.Drawing.Point(425, 210);
-            this.numericUpDown7.Maximum = new decimal(new int[] {
+            this.numDesconto.Location = new System.Drawing.Point(425, 210);
+            this.numDesconto.Maximum = new decimal(new int[] {
             1410065407,
             2,
             0,
             0});
-            this.numericUpDown7.Minimum = new decimal(new int[] {
+            this.numDesconto.Minimum = new decimal(new int[] {
             1410065407,
             2,
             0,
             -2147483648});
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown7.TabIndex = 27;
-            this.numericUpDown7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numDesconto.Name = "numDesconto";
+            this.numDesconto.Size = new System.Drawing.Size(120, 20);
+            this.numDesconto.TabIndex = 27;
+            this.numDesconto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label10
             // 
@@ -378,43 +378,44 @@
             this.label12.TabIndex = 30;
             this.label12.Text = "cm";
             // 
-            // btnNovo
+            // btnSalvar
             // 
-            this.btnNovo.Location = new System.Drawing.Point(157, 324);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(104, 34);
-            this.btnNovo.TabIndex = 31;
-            this.btnNovo.Text = "Salvar";
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnSalvar.Location = new System.Drawing.Point(157, 324);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(104, 34);
+            this.btnSalvar.TabIndex = 31;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // button1
+            // btnCancelar
             // 
-            this.button1.Location = new System.Drawing.Point(425, 324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 34);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(425, 324);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(104, 34);
+            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // FrmNewAparelho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnNovo);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.numericUpDown7);
-            this.Controls.Add(this.numericUpDown6);
+            this.Controls.Add(this.numDesconto);
+            this.Controls.Add(this.numPreco);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Peso);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.numPeso);
+            this.Controls.Add(this.numExpessura);
+            this.Controls.Add(this.numQuantidade);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -422,19 +423,19 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.cmbFabricante);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numAltura);
             this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.numPrecoInicial);
+            this.Controls.Add(this.numLargura);
             this.Name = "FrmNewAparelho";
             this.Text = "FormCadastrodeAparelho";
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecoInicial)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numLargura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Peso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAltura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numExpessura)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPeso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numPreco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDesconto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,9 +443,9 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numPrecoInicial;
+        private System.Windows.Forms.NumericUpDown numLargura;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numAltura;
         private System.Windows.Forms.ComboBox cmbFabricante;
         private System.Windows.Forms.TextBox txtModelo;
         private System.Windows.Forms.Label label1;
@@ -452,19 +453,19 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.NumericUpDown Peso;
+        private System.Windows.Forms.NumericUpDown numQuantidade;
+        private System.Windows.Forms.NumericUpDown numExpessura;
+        private System.Windows.Forms.NumericUpDown numPeso;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
+        private System.Windows.Forms.NumericUpDown numPreco;
+        private System.Windows.Forms.NumericUpDown numDesconto;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
