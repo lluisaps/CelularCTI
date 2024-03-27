@@ -83,7 +83,7 @@ namespace CelularCTI.Model
                     "peso = " + ap.Peso.ToString().Replace(',', '.') + "," +
                     "quantidade = " + ap.Quantidade + "," +
                     "preco = " + ap.Preco.ToString().Replace(',', '.') + "," +
-                    "desconto = " + ap.Desconto.ToString().Replace(',', '.') + " " +
+                    "desconto = " + ap.Desconto.ToString().Replace(',', '.' ) + " " +
                     "WHERE id_aparelho = " + ap.Id_Aparelho;
                 ConnBanco.Executar(sql);
             }
