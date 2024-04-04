@@ -62,5 +62,46 @@ namespace CelularCTI.Desktop
             ap = Servico.BuscarAparelho();
             lstCelulares.DataSource = ap;
         }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            new FrmCadastrarAparelho().ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult resp;
+            resp = MessageBox.Show("Deseja realmente sair do sistema ?",
+                this.Text,
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (resp == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            Aparelho apSelecionado = new Aparelho();
+
+            apSelecionado = ap[lstCelulares.SelectedIndex];
+            if (apSelecionado.Quantidade > 0)
+            {
+                frmComprarAparelho comprarAparelho = new frmComprarAparelho();
+                comprarAparelho.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("O aparelho" + apSelecionado.Modelo +
+                    "Não tem quantidade disponivel em estoque" +
+                    this.Text,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                lstCelulares.Focus();    
+            }
+            new frmComprarAparelho().ShowDialog();
+        }
     }
 }

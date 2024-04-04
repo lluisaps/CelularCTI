@@ -1,6 +1,6 @@
 ﻿namespace CelularCTI.Model
 {
-    partial class FrmNewAparelho
+    partial class FrmCadastrarAparelho
     {
         /// <summary>
         /// Required designer variable.
@@ -64,23 +64,24 @@
             // 
             // numLargura
             // 
+            this.numLargura.CausesValidation = false;
             this.numLargura.DecimalPlaces = 2;
             this.numLargura.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numLargura.Location = new System.Drawing.Point(157, 112);
+            this.numLargura.Location = new System.Drawing.Point(157, 117);
             this.numLargura.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
+            99999,
             0,
-            0});
+            0,
+            65536});
             this.numLargura.Minimum = new decimal(new int[] {
-            1410065407,
-            2,
+            9999,
             0,
-            -2147483648});
+            0,
+            -2147418112});
             this.numLargura.Name = "numLargura";
             this.numLargura.Size = new System.Drawing.Size(120, 20);
             this.numLargura.TabIndex = 3;
@@ -112,23 +113,24 @@
             // 
             // numAltura
             // 
+            this.numAltura.CausesValidation = false;
             this.numAltura.DecimalPlaces = 2;
             this.numAltura.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numAltura.Location = new System.Drawing.Point(157, 154);
+            this.numAltura.Location = new System.Drawing.Point(157, 159);
             this.numAltura.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
+            99999,
             0,
-            0});
+            0,
+            65536});
             this.numAltura.Minimum = new decimal(new int[] {
-            1410065407,
-            2,
+            9999,
             0,
-            -2147483648});
+            0,
+            -2147418112});
             this.numAltura.Name = "numAltura";
             this.numAltura.Size = new System.Drawing.Size(120, 20);
             this.numAltura.TabIndex = 5;
@@ -136,6 +138,7 @@
             // 
             // cmbFabricante
             // 
+            this.cmbFabricante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFabricante.FormattingEnabled = true;
             this.cmbFabricante.Location = new System.Drawing.Point(157, 37);
             this.cmbFabricante.Name = "cmbFabricante";
@@ -196,6 +199,7 @@
             // 
             // numQuantidade
             // 
+            this.numQuantidade.CausesValidation = false;
             this.numQuantidade.DecimalPlaces = 2;
             this.numQuantidade.Increment = new decimal(new int[] {
             10,
@@ -204,15 +208,15 @@
             0});
             this.numQuantidade.Location = new System.Drawing.Point(425, 114);
             this.numQuantidade.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
+            99999,
             0,
-            0});
+            0,
+            65536});
             this.numQuantidade.Minimum = new decimal(new int[] {
-            1410065407,
-            2,
+            9999,
             0,
-            -2147483648});
+            0,
+            -2147418112});
             this.numQuantidade.Name = "numQuantidade";
             this.numQuantidade.Size = new System.Drawing.Size(120, 20);
             this.numQuantidade.TabIndex = 19;
@@ -220,23 +224,24 @@
             // 
             // numExpessura
             // 
+            this.numExpessura.CausesValidation = false;
             this.numExpessura.DecimalPlaces = 2;
             this.numExpessura.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.numExpessura.Location = new System.Drawing.Point(157, 205);
+            this.numExpessura.Location = new System.Drawing.Point(157, 210);
             this.numExpessura.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
+            99999,
             0,
-            0});
+            0,
+            65536});
             this.numExpessura.Minimum = new decimal(new int[] {
-            1410065407,
-            2,
+            9999,
             0,
-            -2147483648});
+            0,
+            -2147418112});
             this.numExpessura.Name = "numExpessura";
             this.numExpessura.Size = new System.Drawing.Size(120, 20);
             this.numExpessura.TabIndex = 20;
@@ -244,6 +249,7 @@
             // 
             // numPeso
             // 
+            this.numPeso.CausesValidation = false;
             this.numPeso.DecimalPlaces = 2;
             this.numPeso.Increment = new decimal(new int[] {
             10,
@@ -252,15 +258,15 @@
             0});
             this.numPeso.Location = new System.Drawing.Point(157, 245);
             this.numPeso.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
+            99999,
             0,
-            0});
+            0,
+            65536});
             this.numPeso.Minimum = new decimal(new int[] {
-            1410065407,
-            2,
+            9999,
             0,
-            -2147483648});
+            0,
+            -2147418112});
             this.numPeso.Name = "numPeso";
             this.numPeso.Size = new System.Drawing.Size(120, 20);
             this.numPeso.TabIndex = 21;
@@ -329,6 +335,7 @@
             // 
             // numDesconto
             // 
+            this.numDesconto.CausesValidation = false;
             this.numDesconto.DecimalPlaces = 2;
             this.numDesconto.Increment = new decimal(new int[] {
             10,
@@ -337,15 +344,15 @@
             0});
             this.numDesconto.Location = new System.Drawing.Point(425, 210);
             this.numDesconto.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
+            99999,
             0,
-            0});
+            0,
+            65536});
             this.numDesconto.Minimum = new decimal(new int[] {
-            1410065407,
-            2,
+            9999,
             0,
-            -2147483648});
+            0,
+            -2147418112});
             this.numDesconto.Name = "numDesconto";
             this.numDesconto.Size = new System.Drawing.Size(120, 20);
             this.numDesconto.TabIndex = 27;
@@ -396,11 +403,13 @@
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // FrmNewAparelho
+            // FrmCadastrarAparelho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -426,8 +435,9 @@
             this.Controls.Add(this.numAltura);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.numLargura);
-            this.Name = "FrmNewAparelho";
+            this.Name = "FrmCadastrarAparelho";
             this.Text = "FormCadastrodeAparelho";
+            this.Load += new System.EventHandler(this.FrmCadastrarAparelho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numLargura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAltura)).EndInit();

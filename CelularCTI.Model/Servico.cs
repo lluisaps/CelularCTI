@@ -60,15 +60,15 @@ namespace CelularCTI.Model
                 sql = "INSERT INTO aparelho " +
                     "(id_aparelho, id_fabricante, modelo, largura, altura, " +
                     "espessura, peso, quantidade, preco, desconto) VALUES (DEFAULT, " +
-                    ap.Fabricante.Id_Fabricante + ",'" +
-                    ap.Modelo + "'," +
-                    ap.Largura + "," +
-                    ap.Altura + "," +
-                    ap.Espessura + "," +
-                    ap.Peso + "," +
-                    ap.Quantidade + "," +
-                    ap.Preco + "," +
-                    ap.Desconto + ")";
+                    ap.Fabricante.Id_Fabricante.ToString().Replace(',', '.') + ",'" +
+                    ap.Modelo.ToString().Replace(',', '.') + "'," +
+                    ap.Largura.ToString().Replace(',', '.') + "," +
+                    ap.Altura.ToString().Replace(',', '.') + "," +
+                    ap.Espessura.ToString().Replace(',', '.') + "," +
+                    ap.Peso.ToString().Replace(',', '.') + "," +
+                    ap.Quantidade.ToString().Replace(',', '.') + "," +
+                    ap.Preco.ToString().Replace(',', '.') + "," +
+                    ap.Desconto.ToString().Replace(',', '.') + ")";
                 ConnBanco.Executar(sql);
 
             }
@@ -227,7 +227,7 @@ namespace CelularCTI.Model
             return fab;
         }
 
-        public static Pedido FazerPedido(Aparelho ap)
+        public static Pedido FazerPedido(Aparelho ap, string observacao)
         {
             Pedido p = new Pedido();
 
@@ -235,11 +235,12 @@ namespace CelularCTI.Model
             {
                 p.Aparelho = ap;
                 p.DataHoraPedido = DateTime.Now;
+                p.Observacao = observacao;
 
                 String sql = "INSERT INTO pedido (id_aparelho, datahorapedido) " +
                             "VALUES (" + ap.Id_Aparelho +
-                            ", '" + p.DataHoraPedido.ToString("yyyy-MM-dd hh:mm:ss") +
-                            "')";
+                            ", '" + p.DataHoraPedido.ToString("yyyy-MM-dd hh:mm:ss") + "'," +
+                            "'" + observacao + "')";
 
                 ConnBanco.Executar(sql);
 

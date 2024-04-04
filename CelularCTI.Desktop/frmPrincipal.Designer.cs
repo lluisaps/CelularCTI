@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numPrecoFinal = new System.Windows.Forms.NumericUpDown();
             this.cmbFabricante = new System.Windows.Forms.ComboBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.btnPreco = new System.Windows.Forms.Button();
@@ -41,14 +42,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lstCelulares = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnListar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnComprar = new System.Windows.Forms.Button();
-            this.btnListar = new System.Windows.Forms.Button();
-            this.numPrecoFinal = new System.Windows.Forms.NumericUpDown();
+            this.bntSair = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecoFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecoInicial)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecoFinal)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -71,6 +72,30 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pesquisar Por:";
+            // 
+            // numPrecoFinal
+            // 
+            this.numPrecoFinal.DecimalPlaces = 2;
+            this.numPrecoFinal.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numPrecoFinal.Location = new System.Drawing.Point(282, 43);
+            this.numPrecoFinal.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            0});
+            this.numPrecoFinal.Minimum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            -2147483648});
+            this.numPrecoFinal.Name = "numPrecoFinal";
+            this.numPrecoFinal.Size = new System.Drawing.Size(120, 20);
+            this.numPrecoFinal.TabIndex = 11;
+            this.numPrecoFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // cmbFabricante
             // 
@@ -196,24 +221,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Celulares:";
             // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(68, 601);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(104, 34);
-            this.btnNovo.TabIndex = 11;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            // 
-            // btnComprar
-            // 
-            this.btnComprar.Location = new System.Drawing.Point(428, 601);
-            this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(104, 34);
-            this.btnComprar.TabIndex = 12;
-            this.btnComprar.Text = "Comprar";
-            this.btnComprar.UseVisualStyleBackColor = true;
-            // 
             // btnListar
             // 
             this.btnListar.Location = new System.Drawing.Point(22, 234);
@@ -224,35 +231,43 @@
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListarAp_Click);
             // 
-            // numPrecoFinal
+            // btnNovo
             // 
-            this.numPrecoFinal.DecimalPlaces = 2;
-            this.numPrecoFinal.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numPrecoFinal.Location = new System.Drawing.Point(282, 43);
-            this.numPrecoFinal.Maximum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            0});
-            this.numPrecoFinal.Minimum = new decimal(new int[] {
-            1410065407,
-            2,
-            0,
-            -2147483648});
-            this.numPrecoFinal.Name = "numPrecoFinal";
-            this.numPrecoFinal.Size = new System.Drawing.Size(120, 20);
-            this.numPrecoFinal.TabIndex = 11;
-            this.numPrecoFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnNovo.Location = new System.Drawing.Point(68, 601);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(104, 34);
+            this.btnNovo.TabIndex = 11;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // btnComprar
+            // 
+            this.btnComprar.Location = new System.Drawing.Point(255, 601);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.Size = new System.Drawing.Size(104, 34);
+            this.btnComprar.TabIndex = 12;
+            this.btnComprar.Text = "Comprar";
+            this.btnComprar.UseVisualStyleBackColor = true;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
+            // 
+            // bntSair
+            // 
+            this.bntSair.Location = new System.Drawing.Point(455, 601);
+            this.bntSair.Name = "bntSair";
+            this.bntSair.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bntSair.Size = new System.Drawing.Size(104, 34);
+            this.bntSair.TabIndex = 13;
+            this.bntSair.Text = "Sair";
+            this.bntSair.UseVisualStyleBackColor = true;
+            this.bntSair.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 699);
+            this.Controls.Add(this.bntSair);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnNovo);
@@ -262,9 +277,9 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPrecoFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecoInicial)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numPrecoFinal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,6 +303,7 @@
         private System.Windows.Forms.ComboBox cmbFabricante;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.NumericUpDown numPrecoFinal;
+        private System.Windows.Forms.Button bntSair;
     }
 }
 
