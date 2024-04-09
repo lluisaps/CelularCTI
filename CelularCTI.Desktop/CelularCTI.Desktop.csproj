@@ -46,34 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCadastrarAparelho.cs">
+    <Compile Include="..\..\..\..\Downloads\frmCadastrarAparelho.cs">
       <SubType>Form</SubType>
+      <Link>frmCadastrarAparelho.cs</Link>
     </Compile>
-    <Compile Include="frmCadastrarAparelho.Designer.cs">
+    <Compile Include="..\..\..\..\Downloads\frmCadastrarAparelho.Designer.cs">
       <DependentUpon>frmCadastrarAparelho.cs</DependentUpon>
+      <Link>frmCadastrarAparelho.Designer.cs</Link>
     </Compile>
-    <Compile Include="frmComprarAparelho.cs">
+    <Compile Include="..\..\..\..\Downloads\frmComprarAparelho.cs">
       <SubType>Form</SubType>
+      <Link>frmComprarAparelho.cs</Link>
     </Compile>
-    <Compile Include="frmComprarAparelho.Designer.cs">
+    <Compile Include="..\..\..\..\Downloads\frmComprarAparelho.Designer.cs">
       <DependentUpon>frmComprarAparelho.cs</DependentUpon>
+      <Link>frmComprarAparelho.Designer.cs</Link>
     </Compile>
-    <Compile Include="frmPrincipal.cs">
+    <Compile Include="..\..\..\..\Downloads\frmPrincipal.cs">
       <SubType>Form</SubType>
+      <Link>frmPrincipal.cs</Link>
     </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
+    <Compile Include="..\..\..\..\Downloads\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+      <Link>frmPrincipal.Designer.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCadastrarAparelho.resx">
+    <EmbeddedResource Include="..\..\..\..\Downloads\frmCadastrarAparelho.resx">
       <DependentUpon>frmCadastrarAparelho.cs</DependentUpon>
+      <Link>frmCadastrarAparelho.resx</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmComprarAparelho.resx">
+    <EmbeddedResource Include="..\..\..\..\Downloads\frmComprarAparelho.resx">
       <DependentUpon>frmComprarAparelho.cs</DependentUpon>
+      <Link>frmComprarAparelho.resx</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
+    <EmbeddedResource Include="..\..\..\..\Downloads\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+      <Link>frmPrincipal.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

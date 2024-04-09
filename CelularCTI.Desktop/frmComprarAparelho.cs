@@ -14,26 +14,27 @@ namespace CelularCTI.Desktop
 {
     public partial class frmComprarAparelho : Form
     {
-        List<Aparelho> aparelhos;
-        List<Fabricante> fabricantes;
+       
 
-        public List<Aparelho> ap = new List<Aparelho>();
-
-        public frmComprarAparelho()
-        {
-            InitializeComponent();
-        }
-
+        private Aparelho ap = new Aparelho();
+       
         public frmComprarAparelho(Aparelho ap)
         {
             InitializeComponent();
-            this.aparelhos = ap;
+            this.ap = ap;
+             lblFabricante.Text = ap.Fabricante.Nome;
+            lblModelo.Text = ap.Modelo;
+            lblDimensao.Text = ap.Largura + "x" + ap.Altura + "x" + ap.Espessura+ "(cm)";
+            lblQuantidade.Text = ap.Quantidade.ToString();
+            lblPeso.Text = ap.Peso.ToString() + "gramas";
+            lblPreco.Text = ap.Preco.ToString("C");
+            lblDesconto.Text = ap.Desconto.ToString() + "%";
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             DialogResult resp;
-            resp = MessageBox.Show("Deseja cancelar o cadastro ?",
+            resp = MessageBox.Show("Deseja realmente cancelar a compra?",
                 this.Text,
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
@@ -43,11 +44,11 @@ namespace CelularCTI.Desktop
             }
         }
 
-        private void btnComprar_Load(object sender, EventArgs e)
+        private void frmComprarAparelho_Load(object sender, EventArgs e)
         {
             lblFabricante.Text = ap.Fabricante.Nome;
-            lblModelo.Text = aparelho.Modelo;
-            lblDimensao.Text = ap.Largura + "x" + ap.Altura + "x" + ap.Expessura+ "(cm)";
+            lblModelo.Text = ap.Modelo;
+            lblDimensao.Text = ap.Largura + "x" + ap.Altura + "x" + ap.Espessura+ "(cm)";
             lblQuantidade.Text = ap.Quantidade.ToString();
             lblPeso.Text = ap.Peso.ToString() + "gramas";
             lblPreco.Text = ap.Preco.ToString("C");
@@ -62,7 +63,6 @@ namespace CelularCTI.Desktop
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
             this.Close();
-
         }
     }
 }

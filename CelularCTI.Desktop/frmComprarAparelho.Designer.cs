@@ -39,18 +39,20 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblFabricante = new System.Windows.Forms.Label();
             this.lblModelo = new System.Windows.Forms.Label();
-            this.lblDimensoes = new System.Windows.Forms.Label();
+            this.lblDimensao = new System.Windows.Forms.Label();
             this.lblPeso = new System.Windows.Forms.Label();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.lblPreco = new System.Windows.Forms.Label();
             this.lblDesconto = new System.Windows.Forms.Label();
+            this.txtObservacao = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 229);
+            this.label2.Location = new System.Drawing.Point(76, 186);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 16);
@@ -61,7 +63,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(73, 180);
+            this.label5.Location = new System.Drawing.Point(76, 137);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 16);
@@ -72,7 +74,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(73, 132);
+            this.label4.Location = new System.Drawing.Point(76, 89);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 16);
@@ -83,7 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(73, 80);
+            this.label1.Location = new System.Drawing.Point(76, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 16);
@@ -94,7 +96,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(73, 326);
+            this.label9.Location = new System.Drawing.Point(70, 265);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(60, 20);
@@ -105,7 +107,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(73, 366);
+            this.label8.Location = new System.Drawing.Point(70, 305);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(113, 20);
@@ -116,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(413, 132);
+            this.label3.Location = new System.Drawing.Point(465, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
@@ -126,20 +128,20 @@
             // btnComprar
             // 
             this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(497, 299);
-            this.btnComprar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnComprar.Location = new System.Drawing.Point(544, 363);
+            this.btnComprar.Margin = new System.Windows.Forms.Padding(4);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(139, 81);
             this.btnComprar.TabIndex = 33;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
-            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Load);
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(497, 404);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Location = new System.Drawing.Point(544, 468);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(139, 42);
             this.btnCancelar.TabIndex = 34;
@@ -151,7 +153,7 @@
             // 
             this.lblFabricante.AutoSize = true;
             this.lblFabricante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFabricante.Location = new System.Drawing.Point(197, 80);
+            this.lblFabricante.Location = new System.Drawing.Point(200, 37);
             this.lblFabricante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFabricante.Name = "lblFabricante";
             this.lblFabricante.Size = new System.Drawing.Size(52, 18);
@@ -162,29 +164,29 @@
             // 
             this.lblModelo.AutoSize = true;
             this.lblModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModelo.Location = new System.Drawing.Point(197, 132);
+            this.lblModelo.Location = new System.Drawing.Point(200, 89);
             this.lblModelo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModelo.Name = "lblModelo";
             this.lblModelo.Size = new System.Drawing.Size(52, 18);
             this.lblModelo.TabIndex = 36;
             this.lblModelo.Text = "label6";
             // 
-            // lblDimensoes
+            // lblDimensao
             // 
-            this.lblDimensoes.AutoSize = true;
-            this.lblDimensoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDimensoes.Location = new System.Drawing.Point(197, 180);
-            this.lblDimensoes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDimensoes.Name = "lblDimensoes";
-            this.lblDimensoes.Size = new System.Drawing.Size(52, 18);
-            this.lblDimensoes.TabIndex = 37;
-            this.lblDimensoes.Text = "label7";
+            this.lblDimensao.AutoSize = true;
+            this.lblDimensao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDimensao.Location = new System.Drawing.Point(200, 137);
+            this.lblDimensao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDimensao.Name = "lblDimensao";
+            this.lblDimensao.Size = new System.Drawing.Size(52, 18);
+            this.lblDimensao.TabIndex = 37;
+            this.lblDimensao.Text = "label7";
             // 
             // lblPeso
             // 
             this.lblPeso.AutoSize = true;
             this.lblPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPeso.Location = new System.Drawing.Point(197, 227);
+            this.lblPeso.Location = new System.Drawing.Point(200, 184);
             this.lblPeso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeso.Name = "lblPeso";
             this.lblPeso.Size = new System.Drawing.Size(61, 18);
@@ -195,7 +197,7 @@
             // 
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.Location = new System.Drawing.Point(501, 132);
+            this.lblQuantidade.Location = new System.Drawing.Point(553, 87);
             this.lblQuantidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(61, 18);
@@ -206,34 +208,55 @@
             // 
             this.lblPreco.AutoSize = true;
             this.lblPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreco.Location = new System.Drawing.Point(277, 326);
+            this.lblPreco.Location = new System.Drawing.Point(274, 265);
             this.lblPreco.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPreco.Name = "lblPreco";
-            this.lblPreco.Size = new System.Drawing.Size(60, 20);
+            this.lblPreco.Size = new System.Drawing.Size(57, 20);
             this.lblPreco.TabIndex = 40;
-            this.lblPreco.Text = "Preço:";
+            this.lblPreco.Text = "label4";
             // 
             // lblDesconto
             // 
             this.lblDesconto.AutoSize = true;
             this.lblDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDesconto.Location = new System.Drawing.Point(277, 366);
+            this.lblDesconto.Location = new System.Drawing.Point(274, 305);
             this.lblDesconto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDesconto.Name = "lblDesconto";
-            this.lblDesconto.Size = new System.Drawing.Size(60, 20);
+            this.lblDesconto.Size = new System.Drawing.Size(57, 20);
             this.lblDesconto.TabIndex = 41;
-            this.lblDesconto.Text = "Preço:";
+            this.lblDesconto.Text = "label5";
+            // 
+            // txtObservacao
+            // 
+            this.txtObservacao.Location = new System.Drawing.Point(74, 392);
+            this.txtObservacao.Multiline = true;
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.Size = new System.Drawing.Size(395, 135);
+            this.txtObservacao.TabIndex = 42;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(70, 369);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 20);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Observações:";
             // 
             // frmComprarAparelho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(727, 554);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtObservacao);
             this.Controls.Add(this.lblDesconto);
             this.Controls.Add(this.lblPreco);
             this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.lblPeso);
-            this.Controls.Add(this.lblDimensoes);
+            this.Controls.Add(this.lblDimensao);
             this.Controls.Add(this.lblModelo);
             this.Controls.Add(this.lblFabricante);
             this.Controls.Add(this.btnCancelar);
@@ -246,7 +269,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmComprarAparelho";
             this.Text = "frmComprarAparelho";
             this.ResumeLayout(false);
@@ -266,10 +289,12 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblFabricante;
         private System.Windows.Forms.Label lblModelo;
-        private System.Windows.Forms.Label lblDimensoes;
+        private System.Windows.Forms.Label lblDimensao;
         private System.Windows.Forms.Label lblPeso;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Label lblDesconto;
+        private System.Windows.Forms.TextBox txtObservacao;
+        private System.Windows.Forms.Label label6;
     }
 }

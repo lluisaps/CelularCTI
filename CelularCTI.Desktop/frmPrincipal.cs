@@ -88,20 +88,20 @@ namespace CelularCTI.Desktop
             apSelecionado = ap[lstCelulares.SelectedIndex];
             if (apSelecionado.Quantidade > 0)
             {
-                frmComprarAparelho comprarAparelho = new frmComprarAparelho();
+                frmComprarAparelho comprarAparelho = new frmComprarAparelho(apSelecionado);
                 comprarAparelho.ShowDialog();
 
             }
             else
             {
                 MessageBox.Show("O aparelho" + apSelecionado.Modelo +
-                    "Não tem quantidade disponivel em estoque" +
+                    "Não tem quantidade disponivel em estoque",
                     this.Text,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 lstCelulares.Focus();    
             }
-            new frmComprarAparelho().ShowDialog();
+            new frmComprarAparelho(apSelecionado).ShowDialog();
         }
     }
 }
